@@ -22,7 +22,7 @@ WORKDIR /app
 COPY --from=build /app/target/weshare-mvc-exercise-1.0-SNAPSHOT-jar-with-dependencies.jar /app/weshare.jar
 
 # Copy necessary resources
-COPY src/main/resources/templates /app/templates
+COPY src/main/resources/public /app/public
 # COPY src/main/resources/static /app/static
 # COPY src/main/resources/database/weshare.db /app/weshare.db
 
