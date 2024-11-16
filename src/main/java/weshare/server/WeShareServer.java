@@ -42,8 +42,8 @@ import static weshare.model.MoneyHelper.amountOf;
 
 public class WeShareServer {
     public static final String SESSION_USER_KEY = "user";
-    private static final String PAGES_DIR = "/html";
-    private static final String TEMPLATES_DIR = "/templates/";
+    private static final String PAGES_DIR = "/public";
+    private static final String TEMPLATES_DIR = "/public/templates/";
 
     private final Javalin appServer;
 
