@@ -24,6 +24,6 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"weshare-server","imageUri":"490004639972.dkr.ecr.eu-west-1.amazonaws.com/weshare-server:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"hello-server","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json

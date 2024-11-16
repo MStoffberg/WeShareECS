@@ -23,15 +23,12 @@ COPY --from=build /app/target/weshare-mvc-exercise-1.0-SNAPSHOT-jar-with-depende
 
 # Copy necessary resources
 COPY src/main/resources/public /app/public
-# COPY src/main/resources/static /app/static
-# COPY src/main/resources/database/weshare.db /app/weshare.db
 
 # Set environment variables
-ENV DATABASE_PATH=/app/weshare.db
-ENV SERVER_PORT=7000
+ENV SERVER_PORT=5050
 
 # Expose the port for Javelin server
-EXPOSE 5050
+EXPOSE 80
 
 # Command to run the JAR file
 CMD ["java", "-jar", "/app/weshare.jar"]
