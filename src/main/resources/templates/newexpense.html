@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{/layout.html}">
+<head></head>
+<body>
+<div layout:fragment="contents">
+    <h3>Capture a New Expense</h3>
+
+    <form method="post" action="/expense.action" enctype="application/x-www-form-urlencoded" >
+        <div>
+            <label for="description">Description:</label>
+            <input name="description" type="text" id="description" autofocus required />
+        </div>
+
+        <div>
+            <label for="amount">Amount:</label>
+            <input name="amount" type="number" id="amount" required />
+        </div>
+
+        <div>
+            <label for="date">Date:</label>
+<!--            <input name="date" type="date" id="date" value="${#dates.format(T(java.time.LocalDate).now(), 'yyyy-MM-dd')}" required />-->
+            <input name="date" type="text" id="date"  required />
+        </div>
+
+        <input id="submit" type="submit">
+    </form>
+</div>
+</body>
+</html>

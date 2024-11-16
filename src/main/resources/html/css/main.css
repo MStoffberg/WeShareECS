@@ -1,0 +1,223 @@
+/* General body styles */
+body {
+    box-sizing: border-box;
+    margin: 1em;
+    font-family: "Pangolin", sans-serif;
+    background-color: #f9f9f9; /* Soft background */
+    width: 90%;
+    padding: 1em;
+    display: inline-block;
+}
+/* H1 Styles */
+h1 {
+    font-size: 2.5em; /* Larger size for main headings */
+    color: #fd6ba9;
+    text-align: center; /* Center align */
+    margin-bottom: 0.5em; /* Space below */
+    font-family: 'Pangolin', sans-serif; /* Consistent font */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* H3 Styles */
+h3 {
+    font-size: 1.5em; /* Medium size for subheadings */
+    color: #fd6ba9;
+    text-align: left;
+    margin-bottom: 0.5em; /* Space below */
+    font-family: 'Pangolin', sans-serif; /* Consistent font */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    letter-spacing: 1px; /* Spacing between letters */
+    position: relative; /* For adding a decorative element */
+}
+
+/* Optional underline effect for H3 */
+h3::after {
+    content: '';
+    display: block;
+    width: 50%; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background-color: #fd6ba9; /* Soft pink underline */
+    position: absolute; /* Position it relative to h3 */
+    bottom: -5px; /* Space between text and underline */
+    left: 0; /* Align to the left */
+}
+/* Form styles */
+form {
+    padding: 20px;
+    width: 33%;
+    border-radius: 10px;
+    background-color: #fff; /* White background */
+}
+
+form.inline {
+    padding: 0;
+    width: 33%;
+    background-color: #fff; /* White background */
+}
+
+/* Input styles */
+input.inline[type=submit] {
+    width: 100%;
+    background-color: #FFB74D; /* Soft yellow */
+    color: white;
+    padding: 4px;
+    margin: 2px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #fd6ba9; /* Soft yellow */
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #ff006c; /* Darker yellow on hover */
+}
+
+/* Navigation styles */
+nav {
+    display: inline-block; /* Use flexbox for centering */
+    justify-content: left; /* Center items horizontally */
+    flex-wrap: nowrap; /* Allow wrapping of items if needed */
+    margin-bottom: 2em;
+}
+
+nav a {
+    padding: 5px 10px; /* Adjust padding as needed */
+    text-align: center; /* Center text within each link */
+    background-color: #fd6ba9; /* Soft pink background */
+    color: black; /* Black text */
+    margin: 0 5px; /* Add some space between links */
+    border-radius: 4px; /* Optional: rounded corners for links */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+nav a:hover {
+    background-color: #ff006c; /* Darker pink on hover */
+    color: black; /* Black text on hover */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #fd6ba9; /* Soft pink */
+    color: black;
+    text-align: left;
+}
+
+thead th {
+    padding: 12px 15px;
+    font-size: 16px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd; /* Light border */
+}
+
+tbody tr:hover {
+    background-color: #f8e8e8; /* Light hover effect */
+}
+
+tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: black; /* Black text */
+}
+
+tfoot {
+    background-color: #fd6ba9; /* Soft pink */
+    color: black;
+}
+
+tfoot td {
+    padding: 12px 15px;
+    font-weight: bold;
+    text-align: right;
+    font-size: 16px;
+}
+
+/* Grand total styles */
+#grand_total span {
+    font-size: 18px;
+    font-weight: bold;
+    color: Black; /* Soft pink */
+}
+
+/* Centering and layout improvements */
+#expenses {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+tfoot td:nth-child(1),
+tfoot td:nth-child(2) {
+    text-align: left;
+}
+
+/* Error message styles */
+div.error {
+    border: 1px solid #FF6F61; /* Soft pink border */
+    padding: 20px;
+    margin: 20;
+    color: red;
+    width: 60%;
+}
+
+/* Stacktrace styles */
+div.stacktrace {
+    font-size: small;
+    font-family: monospace;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    background-color: #FF6F61; /* Soft pink */
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FF4C40; /* Darker pink on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    table {
+        font-size: 12px;
+    }
+
+    thead th, tbody td, tfoot td {
+        padding: 10px;
+    }
+}
